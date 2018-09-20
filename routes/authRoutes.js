@@ -8,7 +8,7 @@ const multer = require('multer');
 const passport   = require('passport');
 const ensureLogin =require('connect-ensure-login');
 const uploadCloud = require('../config/cloudinary.js');
-const Page = require('../models/page.js')
+const Page = require('../models/Page.js')
 
 
 router.get('/signup', (req, res, next)=>{
@@ -131,8 +131,6 @@ router.post('/page/add', uploadCloud.single('photo'), (req, res, next) => {
       console.log(error)
     })
   });
-
-
 
 
 router.get("/logout", (req, res, next) => {
