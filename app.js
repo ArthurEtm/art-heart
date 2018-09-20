@@ -12,10 +12,10 @@ const passport     = require('passport');
 const session    = require("express-session");
 const MongoStore = require("connect-mongodb-session")(session);
 
-
+mongodb://localhost/art-heart'
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://localhost/art-heart', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   }).catch(err => {
