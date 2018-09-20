@@ -1,0 +1,11 @@
+<div class="pages-wrapper">
+  {{#each pages}}
+    <div class="page-item">
+      <img src="{{this.imgPath}}" alt="">
+      <h4>{{this.title}}</h4>
+      <p>{{this.description}}</p>
+    </div>
+  {{else}}
+    <p>There are no pages yet! :(</p>
+  {{/each}}
+</div>

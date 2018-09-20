@@ -1,0 +1,37 @@
+{{#if theUser}}
+<div>
+Welcome {{theUser.username}}
+</div>
+{{/if}}
+
+
+{{#each theList}}
+
+<div>
+
+    <a href="/pages/{{this._id}}">
+<h3>Title: {{this.title}}</h3>
+    </a>
+    
+
+
+
+   
+   <p>
+       genre: {{this.genre}}
+   </p>
+
+
+   <img src="{{this.image}}" alt="">
+
+   <form action="/pages/delete/{{this._id}}" method="POST">
+       <button>Delete This Movie</button>
+   </form>
+
+    
+
+</div>
+
+<hr>
+
+{{/each}}

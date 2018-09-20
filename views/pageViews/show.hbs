@@ -1,0 +1,27 @@
+
+
+    <h1>Welcome To {{page.title}}'s Page!</h1>
+
+
+    <h6>
+    occupation: {{page.genre}}
+
+    </h6>
+
+    <img src="{{page.image}}" alt="">
+
+
+    <h2>Celebrities In This page</h2>
+
+           <ul>
+            {{#each page.cast}}
+            <li>{{this.name}}</li>
+            {{/each}}
+        </ul>
+    
+
+
+
+        <a href="/pages/edit/{{page._id}}">
+            <button>Edit This page</button>
+        </a>
